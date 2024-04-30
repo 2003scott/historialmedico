@@ -25,7 +25,7 @@ export const ItemMenu: ItemMenuProps[] = [
     {
         name: "Doctores",
         icon: HiOutlineUserGroup,
-        path: "/doctores",
+        path: "/dashboard/doctors",
     },
     {
         name: "Centros Medicos",
@@ -38,6 +38,7 @@ export const ItemMenu: ItemMenuProps[] = [
         path: "/historiales",
     },
 ];
+
 export const Sidebar = ({
     active,
     handleActive,

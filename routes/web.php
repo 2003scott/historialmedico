@@ -32,7 +32,9 @@ Route::get('/dashboard', function () {
 
 Route::prefix('dashboard')->middleware(['auth', 'verified'])->group(function () {
     Route::resource('patients', \App\Http\Controllers\PatientController::class)->names('patients');
+    Route::resource('doctors', \App\Http\Controllers\DoctorController::class)->names('doctors');
 });
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
