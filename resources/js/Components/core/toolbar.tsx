@@ -10,7 +10,7 @@ export const Toolbar = ({
     search?: boolean;
     create?: boolean;
 }) => {
-    const [s, setS] = useQuery("search");
+    const [s, setS] = useQuery("search", 400);
     return (
         <section className="flex justify-between items-center pb-4">
             {search && (
