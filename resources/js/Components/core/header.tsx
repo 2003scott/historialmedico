@@ -22,7 +22,11 @@ export const Header = ({ handleActive }: { handleActive: () => void }) => {
                             Hola,{" "}
                             <span className="font-bold">{auth.user.name}</span>
                         </p>
-                        <p className="text-[12px] text-end">Doctor</p>
+                        <p className="text-[12px] text-end">
+                            {auth.user.roles
+                                .map((role) => role.name)
+                                .join(", ")}
+                        </p>
                     </div>
                     xxx
                 </div>

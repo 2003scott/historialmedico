@@ -16,8 +16,7 @@ export default function DashboardLayout({
     const [active, setActive] = useState<boolean>(false);
     const {
         flash: { success, error },
-        query: { trash },
-    } = usePage<PageProps & { query: { trash?: string } }>().props;
+    } = usePage<PageProps>().props;
 
     const handleActive = () => {
         setActive(!active);
